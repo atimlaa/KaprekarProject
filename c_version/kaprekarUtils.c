@@ -49,7 +49,6 @@ int isKaprekar(int n)
     //increase the modulus by a factor of 10
     //spelling mistake of modulus fixed
     modulus *= 10;
-
     //split the square into two parts
     first = square / modulus;
     second = square % modulus;
