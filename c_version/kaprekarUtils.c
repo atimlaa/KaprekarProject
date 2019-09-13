@@ -1,7 +1,4 @@
-#include<stdlib.h>
-#include<stdio.h>
 #include<math.h>
-
 #include "kaprekarUtils.h"
 
 /**
@@ -24,10 +21,11 @@
  * @return <code>true</code> if <code>n</code> is a Kaprekar Number,
  * <code>false</code> otherwise.
  */
-int isKaprekar(int n){
 
+int isKaprekar(int n)
+{
   if(n < 1) {
-    // changed false to 0
+    // change false to 0
     return 0;
   }
 
@@ -35,7 +33,7 @@ int isKaprekar(int n){
   //compute the square
   long square = n * (long)n;
   //compute the number of digits of the square
-  //changed n to square
+  //change n to square
   int numDigits = (int)log10(square) + 1;
   //changed the modulus from 0 to 1
   long modulus = 1;
@@ -55,10 +53,10 @@ int isKaprekar(int n){
     //test if the split makes a Kaprekar number
     //the second part cannot be zero and if
     //the sum of the two parts is equal to n, then it is
+    // double = instead of a single operand
     if (second > 0 && n == first + second) {
       return 1;
     }
   }
   return 0;
-
 }
